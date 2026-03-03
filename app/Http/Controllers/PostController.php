@@ -6,7 +6,18 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index() {
-        return 'Hola Fernanda';
+    public function index()
+    {
+        return 'Aquí se mostrarán todos los post';
+    }
+
+    public function create() 
+    {
+        return 'Aquí se mostrará un formulario para crear un post';
+    }
+
+    public function show($post) 
+    {
+        return 'Aquí se mostrará el post ' . $post;
     }
 }
