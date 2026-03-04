@@ -7,6 +7,6 @@
     <title>Laravel 12</title>
 </head>
 <body>
-    <h1>Bienvenido a la página principal de Laravel 12</h1>
+    <h1>Bienvenido a la página principal de Laravel</h1>
 </body>
 </html>
