@@ -9,12 +9,17 @@ use Illuminate\View\Component;
 class Alert2 extends Component
 {
     public $color;
-    /**
-     * Create a new component instance.
-     */
+    
     public function __construct($type = 'info')
     {
-        switch ($type) {
+        $color = [
+            'info' => 'text-blue-800 bg-blue-100',
+            'danger' => 'text-red-800 bg-red-100',
+            'success' => 'text-green-800 bg-green-100',
+            'warning' => 'text-yellow-800 bg-yellow-100',
+            'dark' => 'text-gray-800 bg-gray-100',
+        ];
+        /*switch ($type) {
             case 'info':
                 $color = 'text-blue-800 bg-blue-100';
                 break;
@@ -38,10 +43,11 @@ class Alert2 extends Component
             default:
                 $color = 'text-blue-800 bg-blue-100';
                 break;
-        }
+        }*/
 
-        $this->color = $color;
-        
+        //$this->color = $color;
+        $this->color = $color[$type] ?? $color['info'];
+
     }
 
     /**
