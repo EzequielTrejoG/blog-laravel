@@ -17,13 +17,13 @@
         {{-- <h1>Bienvenido a la página principal de Laravel</h1> --}}
 
         <!-- Componente de alerta (views.componentes.alert)-->
-        <x-alert2 type="success" class="mb-4">
+        <x-alert2 type="success" class="mb-4 mt-5">
             <x-slot name="title">
                 Título de la alerta.
             </x-slot>
             Contenido de la alerta
         </x-alert2>
-        <p>Hola Mundo</p>
+        <p>Hola Monchita</p>
     </div>
 @endsection
 <!--</x-app-layout>-->
