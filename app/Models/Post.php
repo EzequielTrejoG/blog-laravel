@@ -9,6 +9,16 @@ class Post extends Model
 {
     protected $table = 'posts';
 
+    //Función para convertir el campo published_at a un objeto fecha y hora
+    protected function casts(): array
+    {
+        return [
+            'published_at' => 'datetime',
+            'is_active' => 'boolean'
+        ];
+    }
+
+    //Función para modificar el valor del campo title antes de guardarlo en la base de datos
     protected function title(): Attribute
     {
         return Attribute::make(
