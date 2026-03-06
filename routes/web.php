@@ -12,16 +12,16 @@ Route::get('/posts/create', [PostController::class, 'create']);
 Route::get('/posts/{post}', [PostController::class, 'show']);
 
 Route::get('/prueba', function () {
-    /*$post = new Post;
+    $post = new Post;
 
     // ***** Crear Nuevo Registro ***** //
-    $post->title ='Título de Prueba 4';
+    $post->title ='TítuLO DE PRueBa 4';
     $post->content = 'Contenido de Prueba 4';
     $post->categoria = 'Ctaegoria de Prueba 4';
 
     $post->save();
 
-    return $post; */
+    return $post;
 
     // ***** Actualizar Registros ***** //
     /*$post = Post::find(1);
