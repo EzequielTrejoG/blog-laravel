@@ -12,11 +12,13 @@ class Post extends Model
     protected function title(): Attribute
     {
         return Attribute::make(
+            //Mutador
             set: function ($value) 
             {
                 //return strtolower($value); //Convertir a minúscula todo el texto
                 return ucfirst(strtolower($value)); //Convertir a minúscula todo el texto y la primera letra en mayúscula
             }/*,
+            //Accesor
             get: function ($value) 
             {
                 return ucfirst($value); //Primera letra en mayúscula
