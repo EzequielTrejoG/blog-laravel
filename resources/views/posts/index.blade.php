@@ -4,6 +4,9 @@
 
 @section('content')
     <h1>Aquí se mostrarán todos los posts de la página</h1>
+
+    <a href="/posts/create">Nuevo Post</a>
+
     <ul>
         @foreach ($posts as $post)
             <li>
