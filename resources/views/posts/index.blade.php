@@ -3,7 +3,7 @@
 @section('title', 'Listado de POSTS')
 
 @section('content')
-    <h1>Aquí se mostrarán todos los posts de la página</h1>
+    <h1 class="text-2xl">Aquí se mostrarán todos los posts de la página</h1>
 
     <a href="/posts/create">Nuevo Post</a>
 
@@ -16,4 +16,7 @@
             </li>
         @endforeach
     </ul>
+
+    {{ $posts->links() }}
+
 @endsection
