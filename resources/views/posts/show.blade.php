@@ -7,11 +7,12 @@
     <title>Laravel 12 | Posts</title>
 </head>
 <body>
-    <h1>Aquí se mostrará el post {{ $post }}</h1>
-
-    @if (true)
-        <p>Contenido de Prueba</p>
-    @endif
+    <a href="/posts">Volver a Posts</a>
+    <h1>Título: {{ $post->title }}</h1>
+    <p>
+        <b>Categoría: </b> {{ $post->category }}
+    </p>
+    <p>{{ $post->content }}</p>
 
 </body>
 </html>
