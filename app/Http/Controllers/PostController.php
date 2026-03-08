@@ -41,7 +41,7 @@ class PostController extends Controller
         $post->content = $request->content;
         $post->save();
 
-        return redirect('/posts');
+        return redirect(route('posts.index'));
     }
 
     public function edit($post) 
@@ -59,7 +59,7 @@ class PostController extends Controller
         $post->content = $request->content;
         $post->save();
 
-        return redirect("/posts/{$post->id}");
+        return redirect(route('posts.show', $post->id));
     }
 
     public function destroy($post)
@@ -67,7 +67,7 @@ class PostController extends Controller
         $post = Post::find($post);
         $post->delete();
 
-        return redirect('/posts');
+        return redirect(route('posts.index'));
     }
 
 }

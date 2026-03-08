@@ -1,10 +1,10 @@
 @extends('layouts.plantilla')
 
-@section('title', 'Crear Post')
+@section('title', 'Editar Post')
 
 @section('content')
     <h1>Formulario para editar Post</h1>
-    <form action="/posts/{{ $post->id }}" method="POST">
+    <form action="{{ route('posts.update', $post->id) }}" method="POST">
 
         @csrf
         @method('PUT')

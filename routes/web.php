@@ -7,10 +7,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class);
 
-Route::get('/posts', [PostController::class, 'index']);
-Route::get('/posts/create', [PostController::class, 'create']);
-Route::get('/posts/{post}', [PostController::class, 'show']);
-Route::post('/posts', [PostController::class, 'store']);
-Route::get('/posts/{post}/edit', [PostController::class, 'edit']);
-Route::put('/posts/{post}', [PostController::class, 'update']);
-Route::delete('/posts/{post}', [PostController::class, 'destroy']);
+Route::get('/articles', [PostController::class, 'index'])->name('posts.index');
+Route::get('/articles/create', [PostController::class, 'create'])->name('posts.create');
+Route::get('/articles/{post}', [PostController::class, 'show'])->name('posts.show');
+Route::post('/articles', [PostController::class, 'store'])->name('posts.store');
+Route::get('/articles/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
+Route::put('/articles/{post}', [PostController::class, 'update'])->name('posts.update');
+Route::delete('/articles/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
