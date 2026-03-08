@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('title', 'Listado de POSTS')
+@section('title', 'Listado de Posts')
 
 @section('content')
     <h1 class="text-2xl">Aquí se mostrarán todos los posts de la página</h1>
