@@ -4,13 +4,16 @@
 
 @section('content')
     <h1>Formulario para editar Post</h1>
-    <form action="{{ route('posts.update', $post->id) }}" method="POST">
+    <form action="{{ route('posts.update', $post) }}" method="POST">
 
         @csrf
         @method('PUT')
 
         <label>Título:</label>
         <input type="text" name="title" id="title" value="{{ $post->title }}">
+        <br><br>
+        <label>Slug:</label>
+        <input type="text" name="slug" id="slug" value="{{ $post->slug }}">
         <br><br>
         <label>Categoría:</label>
         <input type="text" name="category" id="category" value="{{ $post->category }}">

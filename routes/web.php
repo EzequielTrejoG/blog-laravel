@@ -15,8 +15,9 @@ Route::get('/articles/{post}/edit', [PostController::class, 'edit'])->name('post
 Route::put('/articles/{post}', [PostController::class, 'update'])->name('posts.update');
 Route::delete('/articles/{post}', [PostController::class, 'destroy'])->name('posts.destroy');*/
 
-Route::resource('articulos', PostController::class)
-            ->parameters(['articulos' => 'post'])
-            ->names('posts');
+Route::resource('articles', PostController::class)->parameters(['articles' => 'post'])->names('posts');
+
+//Route::apiResource('articles', PostController::class);
+
 //Route::resource('articles', PostController::class)->except(['destroy', 'update']); //Solo para excluir destroy y update
 //Route::resource('articles', PostController::class)->only(['index', 'create', 'store']); //Solo para incluir index, create y store

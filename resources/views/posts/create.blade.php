@@ -9,6 +9,9 @@
         <label>Título:</label>
         <input type="text" name="title" id="title">
         <br><br>
+        <label>Slug:</label>
+        <input type="text" name="slug" id="slug">
+        <br><br>
         <label>Categoría:</label>
         <input type="text" name="category" id="category">
         <br><br>
