@@ -12,6 +12,17 @@ class Post extends Model
 
     protected $table = 'posts';
 
+    /* protected $fillable = [
+        'title',
+        'slug',
+        'category',
+        'content'
+    ]; */
+
+    protected $guarded = [
+        'is_active'
+    ];
+
     //Función para convertir el campo published_at a un objeto fecha y hora
     protected function casts(): array
     {
