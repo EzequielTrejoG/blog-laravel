@@ -10,17 +10,33 @@
         @method('PUT')
 
         <label>Título:</label>
-        <input type="text" name="title" id="title" value="{{ $post->title }}">
+        <input type="text" name="title" id="title" value="{{ old('title', $post->title) }}">
+        @error('title')
+            <br><small style="color: red">{{ $message }}</small>
+        @enderror
         <br><br>
+        
         <label>Slug:</label>
-        <input type="text" name="slug" id="slug" value="{{ $post->slug }}">
+        <input type="text" name="slug" id="slug" value="{{ old('slug', $post->slug) }}">
+        @error('slug')
+            <br><small style="color: red">{{ $message }}</small>
+        @enderror
         <br><br>
+
         <label>Categoría:</label>
-        <input type="text" name="category" id="category" value="{{ $post->category }}">
+        <input type="text" name="category" id="category" value="{{ old('category', $post->category) }}">
+        @error('category')
+            <br><small style="color: red">{{ $message }}</small>
+        @enderror
         <br><br>
+
         <label>Contenido:</label>
-        <textarea name="content" id="content">{{ $post->content }}</textarea>
+        <textarea name="content" id="content">{{ old('content', $post->content) }}</textarea>
         <br><br>
+        @error('content')
+            <br><small style="color: red">{{ $message }}</small>
+        @enderror
+
         <button type="submit">Actualizar Post</button>
     </form>
 @endsection
