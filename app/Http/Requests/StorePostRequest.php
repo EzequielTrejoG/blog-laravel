@@ -42,7 +42,7 @@ class StorePostRequest extends FormRequest
         ];
     } */
 
-    public function attributes()
+    /* public function attributes()
     {
         return [
             'title' => 'nombre',
@@ -50,5 +50,5 @@ class StorePostRequest extends FormRequest
             'category' => 'categoría',
             'content' => 'contenido'
         ];
-    }
+    } */
 }
