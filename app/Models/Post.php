@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
 
 class Post extends Model
 {
@@ -53,6 +54,16 @@ class Post extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    //Función para generar el slug automáticamente a partir del título
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($post) {
+            $post->slug = Str::slug($post->title);
+        });
     }
 
 }

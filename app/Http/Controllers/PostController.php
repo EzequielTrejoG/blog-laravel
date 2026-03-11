@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePostRequest;
+use App\Mail\PostCreateMail;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PostController extends Controller
 {
@@ -30,23 +32,18 @@ class PostController extends Controller
 
     public function store(StorePostRequest $request)
     {
-        /* $request->validate([
-            'title' => ['required', 'min:5', 'max:255'],
-            'slug' => 'required|unique:posts',
-            'category' => 'required',
-            'content' => 'required'
-        ]); */
+        $post = Post::create($request->all());
 
-        Post::create($request->all());
+        /* $post = Post::create($request->all());
 
-        /* $post = Post::create($request->all()); */
-
-        /* $post = new Post();
+        $post = new Post();
         $post->title = $request->title;
         $post->slug = $request->slug;
         $post->category = $request->category;
         $post->content = $request->content;
         $post->save(); */
+
+        Mail::to('421003866@cuautitlan.unam.mx')->send(new PostCreateMail($post));
 
         return redirect()->route('posts.index');
     }

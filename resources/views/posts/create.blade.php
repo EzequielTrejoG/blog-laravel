@@ -5,7 +5,7 @@
 @section('content')
     <h1>Formulario para crear un nuevo Post</h1>
 
-    {{ __('Client Closed Request') }}
+    {{-- {{ __('Client Closed Request') }} --}}
 
     {{-- @if ($errors->any())
         <div>
@@ -28,12 +28,12 @@
         @enderror
         <br><br>
 
-        <label>Slug:</label>
+        {{-- <label>Slug:</label>
         <input type="text" name="slug" id="slug" value="{{ old('slug') }}">
         @error('slug')
             <br><small style="color: red">{{ $message }}</small>
         @enderror
-        <br><br>
+        <br><br> --}}
         
         <label>Categoría:</label>
         <input type="text" name="category" id="category" value="{{ old('category') }}">
